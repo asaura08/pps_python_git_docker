@@ -2,6 +2,7 @@ from email.policy import default
 from urllib import response
 from fastapi import FastAPI, Request, Response
 from fastapi.responses import HTMLResponse
+from bayeta import frotar
 
 app = FastAPI()
 
