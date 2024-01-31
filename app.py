@@ -1,7 +1,7 @@
 from email.policy import default
 from urllib import response
 from fastapi import FastAPI, Request, Response
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from bayeta import frotar
 
 app = FastAPI()
@@ -29,3 +29,7 @@ async def read_root(request: Request):
     </html>
     """
     return html_content
+
+@app.get("/frotar/{n_frases}", response_class=JSONResponse)
+async def read_frotar(request: Request, n_frases: int):
+    return frotar(n_frases)
