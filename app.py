@@ -1,12 +1,9 @@
-from email.policy import default
-from urllib import response
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from bayeta import frotar
 
 app = FastAPI()
 
-# Ruta de la página principal
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     html_content = """
@@ -33,4 +30,3 @@ async def read_root(request: Request):
 @app.get("/frotar/{n_frases}", response_class=JSONResponse)
 async def read_frotar(request: Request, n_frases: int):
     return frotar(n_frases)
-

@@ -87,16 +87,24 @@ uvicorn app:app --reload
 
 Si prefieres ejecutar la aplicación con Docker, asegúrate de tener Docker y sigue estos pasos:
 
-1. Construye la imagen:
+1. Construye la imagen, descarga la de mongo y crea la red:
 
 ```bash
 docker build -t la-bayeta-de-la-fortuna .
+docker pull mongo
+docker network create bayeta-app 
 ```
 
-2. Levanta el contenedor:
+2. levanta el contenedor de la base de datos:
 
 ```bash
-docker run -d --name la-bayeta-de-la-fortuna -p 8000:8000 la-bayeta-de-la-fortuna
+docker run -d --network bayeta-app --name mongo-db mongo
+```
+
+3. Levanta el contenedor de la api:
+
+```bash
+docker run -d --network bayeta-app --name la-bayeta-de-la-fortuna -p 8000:8000 la-bayeta-de-la-fortuna
 ```
 
 Accede a la aplicación desde [http://localhost:8000](http://localhost:8000).
