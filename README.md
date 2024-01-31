@@ -9,6 +9,7 @@ Bienvenido al proyecto "La Bayeta de la Fortuna". Esta aplicación web sencilla 
   - [Tecnologías](#tecnologías)
   - [Requisitos](#requisitos)
   - [Configuración del Entorno](#configuración-del-entorno)
+  - [Enlaces a la documentación de la api](#enlaces-a-la-documentación-de-la-api)
   - [Desarrollo Colaborativo](#desarrollo-colaborativo)
   - [Ejecución](#ejecución)
     - [Python](#python)
@@ -45,6 +46,12 @@ cd pps_python_git_docker
 ```bash
 ./setup.sh
 ```
+
+## Enlaces a la documentación de la api
+
+- [Documentación de la api](http://localhost:8000/docs)
+- [Documentación de la api alternativa](http://localhost:8000/redoc) 
+- [Documentación de la api en formato JSON](http://localhost:8000/openapi.json)
 
 ## Desarrollo Colaborativo
 
