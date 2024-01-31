@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from bayeta import frotar
 
 app = FastAPI()
 
