@@ -33,3 +33,4 @@ async def read_root(request: Request):
 @app.get("/frotar/{n_frases}", response_class=JSONResponse)
 async def read_frotar(request: Request, n_frases: int):
     return frotar(n_frases)
+
