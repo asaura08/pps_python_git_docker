@@ -13,6 +13,7 @@ Bienvenido al proyecto "La Bayeta de la Fortuna". Esta aplicación web sencilla 
   - [Ejecución](#ejecución)
     - [Python](#python)
     - [Docker](#docker)
+    - [Docker compose](#docker-compose)
 
 ## Tecnologías
 
@@ -82,8 +83,26 @@ source venv/bin/activate
 ```bash
 uvicorn app:app --reload
 ```
-
 ### Docker
+
+Si prefieres ejecutar la aplicación con Docker, asegúrate de tener Docker y sigue estos pasos:
+
+1. Construye la imagen:
+
+```bash
+docker build -t la-bayeta-de-la-fortuna .
+```
+
+2. Levanta el contenedor:
+
+```bash
+docker run -d --name la-bayeta-de-la-fortuna -p 8000:8000 la-bayeta-de-la-fortuna
+```
+
+Accede a la aplicación desde [http://localhost:8000](http://localhost:8000).
+
+
+### Docker compose
 
 
 Si prefieres ejecutar la aplicación con Docker, asegúrate de tener Docker-compose y sigue estos pasos:

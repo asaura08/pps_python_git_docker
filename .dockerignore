@@ -1,0 +1,8 @@
+*.pdf
+*.env
+*.log
+__pycache__/
+venv/
+*.md
+setup.sh
+*.git*
