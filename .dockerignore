@@ -6,3 +6,4 @@ venv/
 *.md
 setup.sh
 *.git*
+docker-compose.yml
